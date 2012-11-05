@@ -33,8 +33,8 @@
     <body>
         <div id="controls">
             <div id="modtype" class="set">
-                <input id="rock" type="radio" name="modtype" checked="checked"/><label for="rock">Rock</label>
-                <input id="soil" type="radio" name="modtype" /><label for="soil">Soil</label>
+                <input id="rock" type="radio" name="modtype"/><label for="rock">Rock</label>
+                <input id="soil" type="radio" name="modtype"  checked="checked"/><label for="soil">Soil</label>
                 <input id="water" type="radio" name="modtype" /><label for="water">Water</label>
             </div>
             <div id="modop" class="set">
@@ -42,21 +42,24 @@
                 <input id="sub" type="radio" name="modop" /><label for="sub">Remove</label>
             </div>
             <div id="params" class="set">
-                <input id="rain" type="checkbox" checked="checked"/><label for="rain">Rain</label>
+                <!--<input id="rain" type="checkbox" checked="checked"/><label for="rain">Rain</label>
                 <input id="evaporate" type="checkbox" checked="checked"/><label for="evaporate">Evaporate</label>
-                <input id="erode" type="checkbox" checked="checked"/><label for="erode">Erode</label>
+                <input id="erode" type="checkbox" checked="checked"/><label for="erode">Erode</label>-->
+				<input id="move" type="checkbox"/><label for="move">Move Plates</label>
             </div>
             <div id="instructions">
                 press&amp;drag mouse to look, SPACE=create/remove, scrollwheel=editsize, W=forward, S=backward, A=left, D=right, Q=down, E=up
             </div>
         </div>
-        <div id="share">
+        <!--<div id="share">
             <a href="http://codeflow.org/entries/2011/nov/10/webgl-gpu-landscaping-and-erosion/">Website</a>
             <a href="https://github.com/pyalot/craftscape">Github</a>
             <a href="http://www.youtube.com/watch?v=CWD3cpWTgeU">Youtube</a>
             <span  class='st_reddit_hcount' displayText='Reddit'></span><span  class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_stumbleupon_hcount' displayText='StumbleUpon'></span><span  class='st_plusone_hcount' ></span>
             <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'5871d414-1403-44e1-84ad-d9788b4c19b2'});</script>
-        </div>
+        </div>-->
         <canvas></canvas>
+		<div id="loading"><h1> Loading... </h1></div>
+		<textarea id="copytext" style="display:none; z-index:9999999; font-size:5px; width:1000px; height:500px; position:absolute; left: 0px; top:0px;"></textarea>
     </body>
 </html>

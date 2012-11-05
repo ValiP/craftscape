@@ -111,7 +111,7 @@ fragment:
             float factor = pow(2.0, float(i));
             h += snoise(vec3(uv*factor, delta*float(i+1)))/(pow(factor, 0.88)*10.0);
         }
-        gl_FragColor = vec4(0, h, 0.0, 1.0);
+        gl_FragColor = vec4(0, 0.0, 0.0, 1.0);
     }
 
 

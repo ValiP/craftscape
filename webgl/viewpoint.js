@@ -75,7 +75,7 @@ var Viewpoint = Class({
         acc.x = keys.a ? +1 : keys.d ? -1 : 0;
         acc.y = keys.q ? +1 : keys.e ? -1 : 0;
         acc.z = keys.s ? -1 : keys.w ? +1 : 0;
-        acc.mul(timestep).mul(this.rot);
+        acc.mul(timestep / 2).mul(this.rot);
 
         if(now - time > 0.25){
             time = now - 0.25;

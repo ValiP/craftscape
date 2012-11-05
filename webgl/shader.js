@@ -5,6 +5,7 @@
 
 Framework.components.push(function(framework, gl){
     var current = null;
+	window.gl = gl;
 
     framework.Shader = Class({
         __init__: function(source, filename){
@@ -23,9 +24,10 @@ Framework.components.push(function(framework, gl){
             this.link(source);
         },
         uniformLocation: function(name){
+			
             var location = this.uniform_cache[name];
             if(location === undefined){
-                var location = this.uniform_cache[name] = gl.getUniformLocation(this.program, name);
+				var location = this.uniform_cache[name] = gl.getUniformLocation(this.program, name);
             }
             return location;
         },
@@ -70,6 +72,7 @@ Framework.components.push(function(framework, gl){
             }
         },
         preprocess: function(source){
+		console.log(source.split, source.length);
             var lines = source.split('\n');
             var shaders = {};
             var type;

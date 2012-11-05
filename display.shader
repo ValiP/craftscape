@@ -115,11 +115,14 @@ fragment:
         vec3 w = texture2D(water, uv).xyz;
         float rock_factor = 20.0;
         //vec3 rock_color = pow(texture2D(rock, uv*rock_factor).rgb, vec3(0.5)) * 1.5;
-        vec3 rock_color = texture2D(rock, uv*rock_factor).rgb * 0.8;
+        vec3 rock_color = texture2D(rock, uv*rock_factor).rgb / 10.;
+		rock_color.r += 0.1;
+		rock_color.r *= 3.;
         vec3 rock_normal = orthobasis * normalize((texture2D(rock_normals, uv*rock_factor).xyz-0.5)*vec3(2.0, 3.0, 2.0));
         
         float grass_factor = 8.0;
         vec3 grass_color = texture2D(grass, uv*grass_factor).rgb;
+		grass_color.rg*=2.;
         vec3 grass_normal = orthobasis * normalize((texture2D(grass_normals, uv*grass_factor).xyz-0.5)*vec3(2.0, 1.0, 2.0));
 
         vec3 dirt = vec3(85.0/255.0, 34.0/255.0, 0.0);

@@ -69,6 +69,17 @@ div.set{
     background-color: #eee;
 }
 
+#loading{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    margin-left: -250px;
+    margin-top: -100px;
+	font-size: 2em;
+}
+
 h1{
     text-align: center;
     margin: 10px;
